@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { About } from './Components/About/About';
 
 function App() {
+
+  const nombre = 'Pepe';
+
+  const user = {
+    name:'pepe',
+    lastname: 'lopes',
+    age: 32,
+    img: '',
+    likeCss: false
+  }
+
+  function hizoClick(){
+    console.log('usted hizo click');
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // comentario jsx
+    <div className='container'>
+
+      <main>
+        <h2>Bienvenido a mi web, tu nombre es {nombre}</h2>
+        <button className='btn btn-success' onClick={hizoClick}>bloque de codigo</button>
+        <button className='btn btn-danger' onClick={() => console.log('click2')}>una sola linea de codigo</button>
+        <About user={user} />
+      </main>
     </div>
   );
 }
