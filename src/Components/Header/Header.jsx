@@ -4,7 +4,7 @@ const Header = () => {
   return(
     //jsx => js vanila + xml
     <header className='Header'>
-      <h2>Logo</h2>
+      <h2>Logo-new</h2>
       <nav>
         <a href="/">home</a>
         <a href="/">About</a>
